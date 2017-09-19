@@ -1,0 +1,501 @@
+﻿# Brett Loot
+# UPDATED FOR 3.0 FALL OF ORIATH
+####################################################################################
+# Installation Instructions
+# Put script in your relevant user directory
+# For me it's C:\Users\Oos\Documents\My Games\Path of Exile
+# Paste this script in a file with the .filter suffix, like Item.filter
+# Go to PoE, go to UI, scroll to bottom, set item filter to the script name, in this case "Item"
+####################################################################################
+# Colour Reference Sheet
+# 0 204 255 ~ blue
+# 204 255 0 ~ green
+# 255 0 204 ~ pink
+# 255 204 0 ~ gold
+# 200 200 200 180~ grey text for hidden whites
+# 136 136 255 180 ~ blue text for hidden blues
+# 40 40 40 ~ background colour for some items
+# 255 255 255 ~ pure white text for wisdom/portal
+# 255 128 128 ~ salmon for div/et pots
+# Default colours
+# 170 158 130 ~ Currency
+# 27 162 155 ~ Gem
+# 200 200 200 ~ Normal
+# 136 136 255 ~ Magic
+# 255 255 119 ~ Rare
+# 175 96 37 ~ Unique
+# Field 0, Quest/Special
+# Field 1, GG
+# Field 2, Currency/Recipe
+# Field 3, Gems
+# Field 4, Uniques and Rares
+# Field 5, Flasks
+# Field 6, Mapping Configuration
+# Field 7, ETC
+# Field 8, Fade the rest
+# Field 0, Special
+####################################################################################
+Show # Harbinger League Pieces
+	Class Piece
+	SetFontSize 45
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 37 105 175 255    # BACKGROUND:	 Harbinger Item - Pieces
+	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
+####################################################################################
+Show # % - TB - Breachstones - Relics - T1
+    Class "Misc Map Items"
+    SetTextColor 0 0 0
+    SetBackgroundColor 136 136 255 # BACKGROUND:T1 Global High Value Drop
+    SetBorderColor 0 0 0
+    SetFontSize 45
+    PlayAlertSound 7 300
+
+Show
+    Class "Quest Items"
+    SetBorderColor 0 255 0
+    SetFontSize 40
+####################################################################################
+# Breach Rings
+Show
+    BaseType "Breach Ring"
+    SetBorderColor 128 0 128
+    SetFontSize 42
+####################################################################################
+# Breach Splinters
+Show
+    BaseType "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of Chayula"
+    SetTextColor 184 0 184
+    SetBorderColor 128 0 128
+    SetFontSize 45
+####################################################################################
+# Reliquary
+Show
+    BaseType "Ancient Reliquary Key"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 119
+    SetBorderColor 255 165 0
+    SetFontSize 45
+####################################################################################
+# Leaguestones
+####################################################################################
+Show
+    Class "Leaguestone"
+    SetBackgroundColor 135 88 150
+    SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+    SetFontSize 42
+    PlayAlertSound 4 70
+	
+Show
+    Class "Leaguestone"
+	Rarity = Magic
+    SetBackgroundColor 135 88 150
+    SetBorderColor 255 255 255
+	SetTextColor 2 187 255
+    SetFontSize 42
+    PlayAlertSound 4 70
+
+# Map Fragments
+Show
+    Class "Map Fragments" "Map Fragment"
+    SetFontSize 42
+
+# Perandus League
+Show
+    BaseType "Perandus Coin"
+    SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255             
+	SetBackgroundColor 249 150 25 255  
+    SetFontSize 40
+####################################################################################
+# Divination Cards
+####################################################################################
+#------------------------------------
+#   [1401] Exceptions to prevent ident. mistakes
+#------------------------------------
+
+Show # %TB-Divination-Exception
+	Class "Divination"
+	BaseType "The Wolf's Shadow"
+	SetFontSize 38
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 100 150 255         # BORDERCOLOR:	 Cosmetic: T4 Divination
+	SetBackgroundColor 145 215 230 225   # BACKGROUND:	 T4 Divination
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+#------------------------------------
+#   [1402] T1 - Top tier cards
+#------------------------------------
+
+Show # %TB-Divination-T1
+	Class "Divination"
+	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Hunter's Reward" "The Dragon's Heart" "Mawr Blaidd" "The Last One Standing" "The Offering" "The Ethereal" "The Queen" "Abandoned Wealth" "The Brittle Emperor" "The Immortal" "The Artist" "Wealth and Power" "Pride Before the Fall" "The Enlightened" "The King's Heart" "Bowyer's Dream" "The Hunger" "The Celestial Justicar" "Spark and the Flame" "Polymath"
+	SetFontSize 45
+	SetTextColor 0 0 255 255             # TEXTCOLOR:	 Cosmetic: T1 Divination card
+	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Cosmetic: T1 and T2 Divination
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+#------------------------------------
+#   [1403] T2 - Great cards
+#------------------------------------
+
+Show # %TB-Divination-T2
+	Class "Divination"
+	BaseType "Chaotic Disposition" "The Void" "The Cartographer" "The Dapper Prodigy" "The Vast" "The Dark Mage" "Last Hope" "The Valkyrie" "The Sephirot" "The Hoarder" "The Chains that Bind" "The Warlord" "The Aesthete" "Saint's Treasure" "The Thaumaturgist" "Heterochromia" "The Porcupine" "The Stormcaller" "The Soul" "Emperor of Purity"
+	SetFontSize 44
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
+	SetBackgroundColor 100 250 250 245   # BACKGROUND:	 T2 Divination
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+#------------------------------------
+#   [1404] T3 - Decent cards
+#------------------------------------
+
+Show # %TB-Divination-T3
+	Class "Divination"
+	BaseType "The Road to Power" "The Arena Champion" "The Gladiator" "Glimmer of Hope" "The Tyrant" "The Union" "The Risk" "The Trial" "Scholar of the Seas" "Lucky Deck" "Humility" "The Penitent" "The Penitent" "The Surveyor" "Lysah's Respite" "The Inventor" "The Jester" "Vinia's Token" "Rats" "The Wrath" "Hope" "Treasure Hunter" "The Explorer" "The Body" "Jack in the Box" "The Traitor" "Valley of Steel Boxes" "Wolven King's Bite" "Wretched" "The Opulent" "Might is Right" "The Fletcher" "The Forsaken" "The Formless Sea" "The Demoness" "Time-Lost Relic" "The Wolf" "Earth Drinker" "Standoff" "Merciless Armament"
+	SetFontSize 40
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Cosmetic: T1 and T2 Divination
+	SetBackgroundColor 50 220 240 235    # BACKGROUND:	 T3 Divination
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+#------------------------------------
+#   [1405] T5 - Format trash tier cards... before
+#------------------------------------
+
+Show # %H3 %TB-Divination-T5
+	Class "Divination"
+	BaseType "Carrion Crow" "Other Cheek" "Hermit" "King's Blade" "Thunderous Skies" "Metalsmith's Gift"
+	SetFontSize 32
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+	SetBackgroundColor 175 215 230 180   # BACKGROUND:	 T5 Divination
+
+#------------------------------------
+#   [1406] T4 - ...showing the remaining cards
+#------------------------------------
+####################################################################################
+Show
+	Class "Divination"
+	SetFontSize 38
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 100 150 255         # BORDERCOLOR:	 Cosmetic: T4 Divination
+	SetBackgroundColor 145 215 230 225   # BACKGROUND:	 T4 Divination
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+# Essence
+Show
+    Class "Currency"
+    BaseType "Essence" "Remnant of Corruption"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 192 203
+    SetBorderColor 0 0 0
+    SetFontSize 40
+
+# Silver Coins
+Show
+    BaseType "Silver Coin"
+    SetTextColor 222 222 222
+    SetBackgroundColor 92 92 92
+    SetBorderColor 219 219 219
+    SetFontSize 45
+
+# Labyrinth Keys
+Show
+    BaseType "Silver Key" "Treasure Key" "Golden Key"
+    SetTextColor 74 230 58
+    SetBorderColor 74 230 58
+    SetFontSize 42
+
+# Talisman    
+Show
+    BaseType "Talisman"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58
+    SetBorderColor 0 128 0
+    SetFontSize 38
+####################################################################################
+# Field 1, GG
+####################################################################################
+Show
+    Class "Fishing Rod"
+    SetTextColor 255 0 204
+
+Show
+    LinkedSockets = 6
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 44
+    PlayAlertSound 6 300
+
+Show
+    BaseType "Mirror of Kalandra" "Rhoa Feather" "Divine Orb" "Exalted Orb"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 44
+    PlayAlertSound 6 300
+####################################################################################
+# Field 2, Currency/Recipe
+####################################################################################
+Show
+    BaseType "Portal Scroll"
+	SetFontSize 28
+	
+Show
+    BaseType "Scroll of Wisdom"
+	SetFontSize 28
+
+Show
+    BaseType "Regal Orb" "Orb of Regret" "Chaos Orb" "Blessed Orb" "Gemcutter's Prism" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Glassblower's Bauble" "Vaal Orb" "Cartographer's Chisel"
+    SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255             
+	SetBackgroundColor 249 150 25 255    
+    SetFontSize 38
+    PlayAlertSound 1 300
+
+Show
+    Class "Currency"
+    SetTextColor 255 204 0
+
+Show
+    LinkedSockets = 5
+    SetTextColor 255 255 255
+    SetBackgroundColor 100 100 255
+    SetFontSize 36
+    PlayAlertSound 2 300
+
+Show
+    Sockets = 6
+    SetTextColor 255 255 255
+    SetBackgroundColor 255 50 50
+    SetBorderColor 255 0 0
+    SetFontSize 36
+    PlayAlertSound 2 300
+
+Show
+    SocketGroup "RGB"
+    SetBorderColor 0 204 255
+	SetFontSize 30
+	
+####################################################################################
+#Maps	
+Show
+    Class "Labyrinth Map Item"
+    SetTextColor 0 0 102
+    SetBackgroundColor 255 255 100
+    SetFontSize 36
+    PlayAlertSound 4 300
+####################################################################################
+# Maps
+####################################################################################
+Show # Maps:Unique
+	Class Maps
+	Rarity Unique
+	SetTextColor 153 101 21
+    SetBackgroundColor 238 232 170
+    SetBorderColor 153 101 21
+    SetFontSize 40
+	
+	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+	
+Show # Maps:T16
+	Class Maps
+	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
+	SetFontSize 45
+	SetTextColor 100 0 122 255           # TEXTCOLOR:	 Cosmetic: T16 guardian maps
+	SetBorderColor 100 0 255 255         # BORDERCOLOR:	 Cosmetic: T16 guardian maps
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 4 300                 # DROPSOUND:	 T1 Maps
+
+Show # Maps:T11-16
+	DropLevel >= 78
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 255 255 255           # BORDERCOLOR:	 white
+    SetBackgroundColor 124 9 9           # BACKGROUND:	 Dark red
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	
+Show # Maps:T6-T10
+	DropLevel >= 73
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 255 255 255           # BORDERCOLOR:	 white
+    SetBackgroundColor 175 75 3         # BACKGROUND:	 light purple
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+
+Show # Maps T1-T5
+	#DropLevel >= 68
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 255 255 255           # BORDERCOLOR:	 white
+    SetBackgroundColor 93 8 178          # BACKGROUND:	 dark purple
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+
+####################################################################################
+# Field 3, Gems
+####################################################################################
+Show
+    Quality > 0
+    Class "Gem"
+    SetTextColor 0 204 255
+    SetBorderColor 0 204 255
+
+Show
+    Class "Gems"
+    SetTextColor 0 204 255
+####################################################################################
+# Field 4, Uniques, Jewels and Rares
+####################################################################################
+Show
+    Rarity = Unique
+    SetTextColor 143 93 9
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 40
+    PlayAlertSound 7 300
+
+Show
+    Class "Jewel"
+    BaseType "Cobalt Jewel"
+    SetBackgroundColor 29 43 75
+
+Show
+    Class "Jewel"
+    BaseType "Crimson Jewel"
+    SetBackgroundColor 75 29 35
+
+Show
+    Class "Jewel"
+    BaseType "Viridian Jewel"
+    SetBackgroundColor 35 75 29
+
+####################################################################################
+#RARE Items
+####################################################################################	
+# 75+ Regal
+#T1 Armor/Weapon Bases
+Show
+	BaseType "Gemini Claw" "Imperial Claw" "Terror Claw" "Imperial Skean" "Imbued Wand" "Jewelled Foil" "Vaal Rapier" "Harbinger Bow" "Imperial Staff" "Eclipse Staff" "Exquisite Blade" "Reaver Sword" "Fleshripper" "Vaal Axe" "Piledriver" "Coronal Maul" "Opal Sceptre" "Astral Plate" "Titan Gauntlets" "Slink Boots" "Slink Gloves" "Titan Greaves" "Dragonscale Boots" "Dragonscale Gauntlets" "Royal Burgonet" "Lion Pelt" "Nightmare Bascinet" "Imperial Buckler" "Colossal Tower Shield" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet" "Titanium Spirit Shield" "Crusader Gloves" "Murder Mitts" "Crusader Boots" "Archon Kite Shield" "Profane Wand" "Platinum Kris" "Sambar Sceptre" "Opal Wand"
+    Rarity = Rare
+    ItemLevel >= 75
+    SetBorderColor 255 0 0
+	SetFontSize 40
+	
+#All accessories
+Show
+	Class "Amulets" "Rings" "Belts"
+	Rarity = Rare
+	ItemLevel >= 75
+	SetBorderColor 255 0 0
+	SetFontSize 40
+	
+#Rest
+Show
+    Rarity = Rare
+    ItemLevel >= 75
+    SetBorderColor 255 0 0
+	SetFontSize 30
+
+# 60+ Chaos
+
+#T1 Armor/Weapon Bases
+Show
+	BaseType "Gemini Claw" "Imperial Claw" "Terror Claw" "Imperial Skean" "Imbued Wand" "Jewelled Foil" "Vaal Rapier" "Harbinger Bow" "Imperial Staff" "Eclipse Staff" "Exquisite Blade" "Reaver Sword" "Fleshripper" "Vaal Axe" "Piledriver" "Coronal Maul" "Opal Sceptre" "Astral Plate" "Titan Gauntlets" "Slink Boots" "Slink Gloves" "Titan Greaves" "Dragonscale Boots" "Dragonscale Gauntlets" "Royal Burgonet" "Lion Pelt" "Nightmare Bascinet" "Imperial Buckler" "Colossal Tower Shield" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet" "Titanium Spirit Shield" "Crusader Gloves" "Murder Mitts" "Crusader Boots" "Archon Kite Shield" "Profane Wand" "Platinum Kris" "Sambar Sceptre" "Opal Wand"
+    Rarity = Rare
+    ItemLevel >= 60
+    SetBorderColor 255 204 0
+	SetFontSize 40
+	
+#All accessories
+Show
+	Class "Amulets" "Rings" "Belts"
+	Rarity = Rare
+	ItemLevel >= 60
+	SetBorderColor 255 204 0
+	SetFontSize 40
+	
+#Rest
+Show
+	Rarity = Rare
+	ItemLevel >= 60
+	SetBorderColor 255 204 0 
+	SetFontSize 30
+
+Show
+    Rarity = Rare
+
+####################################################################################
+# Field 5, Flasks
+####################################################################################
+Show
+    BaseType "Flask"
+    BaseType "Amethyst" "Diamond" "Granite" "Jade" "Quartz" "Quicksilver" "Ruby" "Sapphire" "Topaz"
+    SetBackgroundColor 40 40 40
+
+Show
+    BaseType "Flask"
+    BaseType "Divine Life" "Eternal Life"
+    SetTextColor 255 128 128
+    SetBackgroundColor 0 0 0 180
+
+# Fade flasks not used for leveling
+Show
+    BaseType "Flask"
+    BaseType "Divine" "Eternal"
+	Quality >= 10
+    ItemLevel >= 68
+    SetTextColor 200 200 200 180
+    SetBackgroundColor 0 0 0 180
+    SetFontSize 28
+
+Hide
+    BaseType "Flask"
+####################################################################################
+# Field 7, ETC
+####################################################################################
+#T1 Bases
+Show
+	BaseType "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Steel Ring" "Opal Ring" "Crystal Belt"
+	SetFontSize 32
+	SetBorderColor 191 0 255
+	
+#Chancing Items
+Show 
+	BaseType "Sorcerer Boots"
+	Rarity Normal
+	SetFontSize 38
+	SetTextColor 255 255 255 255         
+	SetBorderColor 0 150 0 150         
+
+Show 
+	BaseType "Leather Belt"
+	Rarity Normal
+	SetTextColor 255 255 255 255   
+	SetBorderColor 0 150 0 150           
+
+# Chisel Recipe
+Show
+	Quality >= 15
+    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+
+# Shows 4 Linked Sockets Armor for Level, Stops Showing At Map Level (Endgame)
+Show
+    LinkedSockets >= 4
+    Class "Body Armours" "Boots" "Gloves" "Helmets"
+    ItemLevel <= 68
+#Hides everything else
+Hide
+    Rarity = Normal
+
+Hide
+    Rarity = Magic
+
