@@ -3,7 +3,7 @@
 ####################################################################################
 # Installation Instructions
 # Put script in your relevant user directory
-# For me it's C:\Users\Oos\Documents\My Games\Path of Exile
+# For me it's C:\Users\"Username"\Documents\My Games\Path of Exile
 # Paste this script in a file with the .filter suffix, like Item.filter
 # Go to PoE, go to UI, scroll to bottom, set item filter to the script name, in this case "Item"
 ####################################################################################
