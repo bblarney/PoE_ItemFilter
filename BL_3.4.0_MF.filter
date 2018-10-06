@@ -409,6 +409,16 @@ Show # Maps:T16
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 5 300                 # DROPSOUND:	 T1 Maps
 	MinimapIcon 2 Blue Square
+	
+Show
+	Class Maps
+	ElderMap True
+	SetFontSize 45
+	SetTextColor 100 0 122 255           # TEXTCOLOR:	 Cosmetic: T16 guardian maps
+	SetBorderColor 100 0 255 255         # BORDERCOLOR:	 Cosmetic: T16 guardian maps
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 5 300                 # DROPSOUND:	 T1 Maps
+	MinimapIcon 2 Blue Square
 
 Show # Maps:T11-15
 	DropLevel >= 78
