@@ -1,0 +1,833 @@
+﻿# Brett Loot
+# UPDATED FOR 3.3
+####################################################################################
+# Installation Instructions
+# Put script in your relevant user directory
+# For me it's C:\Users\Oos\Documents\My Games\Path of Exile
+# Paste this script in a file with the .filter suffix, like Item.filter
+# Go to PoE, go to UI, scroll to bottom, set item filter to the script name, in this case "Item"
+####################################################################################
+# Colour Reference Sheet
+# 0 204 255 ~ blue
+# 204 255 0 ~ green
+# 255 0 204 ~ pink
+# 255 204 0 ~ gold
+# 200 200 200 180~ grey text for hidden whites
+# 136 136 255 180 ~ blue text for hidden blues
+# 40 40 40 ~ background colour for some items
+# 255 255 255 ~ pure white text for wisdom/portal
+# 255 128 128 ~ salmon for div/et pots
+# Default colours
+# 170 158 130 ~ Currency
+# 27 162 155 ~ Gem
+# 200 200 200 ~ Normal
+# 136 136 255 ~ Magic
+# 255 255 119 ~ Rare
+# 175 96 37 ~ Unique
+# Field 0, Quest/Special
+# Field 1, GG
+# Field 2, Currency/Recipe
+# Field 3, Gems
+# Field 4, Uniques and Rares
+# Field 5, Flasks
+# Field 6, Mapping Configuration
+# Field 7, ETC
+# Field 8, Fade the rest
+# Field 0, Special
+####################################################################################
+#Beastiary League
+Show #$Currency->Net->T1
+	Class Currency
+	BaseType "Thaumaturgical Net" "Necromancy Net"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 T3 Currency
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+Show #$Currency->Net->T2
+	Class Currency
+	BaseType "Simple Steel Net" "Reinforced Steel Net" "Strong Steel Net"
+	SetFontSize 42
+	SetTextColor 155 210 135 255
+	SetBorderColor 0 255 36 255
+	SetBackgroundColor 0 0 0 255
+
+Show #$Currency->Net->T3
+	Class Currency
+	BaseType "Simple Iron Net" "Reinforced Iron Net" "Strong Iron Net"
+	SetFontSize 42
+	SetTextColor 155 210 135 255
+	SetBorderColor 220 220 220 255
+	SetBackgroundColor 0 0 0 255
+
+Show #$Currency->Net->T4
+	Class Currency
+	BaseType "Simple Rope Net" "Reinforced Rope Net" "Strong Rope Net"
+	SetFontSize 42
+	SetTextColor 155 210 135 255
+	SetBorderColor 0 0 0
+	SetBackgroundColor 0 0 0 255
+####################################################################################
+Show # Harbinger League Pieces
+	Class Piece
+	SetFontSize 45
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 37 105 175 255    # BACKGROUND:	 Harbinger Item - Pieces
+	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
+####################################################################################
+Show # % - TB - Breachstones - Relics - T1
+    Class "Misc Map Items"
+    SetTextColor 0 0 0
+    SetBackgroundColor 136 136 255 # BACKGROUND:T1 Global High Value Drop
+    SetBorderColor 0 0 0
+    SetFontSize 45
+    PlayAlertSound 7 300
+
+Show
+    Class "Quest Items"
+    SetBorderColor 0 255 0
+    SetFontSize 40
+	
+Show
+	Class "Incursion Item"
+	SetFontSize 45
+	SetTextColor 74 230 58 255           # TEXTCOLOR:	 Quest
+	SetBorderColor 74 230 58             # BORDERCOLOR:	 Quest Item
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+####################################################################################
+# Breach Rings
+Show
+    BaseType "Breach Ring"
+    SetBorderColor 128 0 128
+    SetFontSize 42
+####################################################################################
+# Breach Splinters
+Show
+    BaseType "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of Chayula"
+    SetTextColor 184 0 184
+    SetBorderColor 128 0 128
+    SetFontSize 45
+####################################################################################
+# Reliquary
+Show
+    BaseType "Ancient Reliquary Key"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 119
+    SetBorderColor 255 165 0
+    SetFontSize 45
+	
+# Reliquary 2
+Show
+    BaseType "Timeworn Reliquary Key"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 119
+    SetBorderColor 255 165 0
+    SetFontSize 45
+####################################################################################
+# Leaguestones
+####################################################################################
+Show
+    Class "Leaguestone"
+    SetBackgroundColor 135 88 150
+    SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+    SetFontSize 42
+    PlayAlertSound 4 70
+	
+Show
+    Class "Leaguestone"
+	Rarity = Magic
+    SetBackgroundColor 135 88 150
+    SetBorderColor 255 255 255
+	SetTextColor 2 187 255
+    SetFontSize 42
+    PlayAlertSound 4 70
+
+# Map Fragments
+Show
+    Class "Map Fragments" "Map Fragment"
+    SetFontSize 42
+
+# Perandus League
+Show
+    BaseType "Perandus Coin"
+    SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255             
+	SetBackgroundColor 249 150 25 255  
+    SetFontSize 40
+
+#Incursion
+Show 
+	Class Currency
+	BaseType "Vial of"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Neutral T1
+	SetBackgroundColor 220 0 0 240       # BACKGROUND:	 Incursion Vial
+####################################################################################
+# Divination Cards
+####################################################################################
+#===============================================================================================================
+# [[1400]] Currency - PART 3 - Divination cards (yes the strange sorting is intended)
+#===============================================================================================================
+#------------------------------------
+#   [2001] Exceptions to prevent ident. mistakes
+#------------------------------------
+
+Show # $Div->T4 %TB-Divination-Exception
+	Class "Divination"
+	BaseType "The Wolf's Shadow" "The Master Artisan"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 100 150 255         # BORDERCOLOR:	 Divi T4
+	SetBackgroundColor 145 215 230 225   # BACKGROUND:	 Divi T4
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+
+#------------------------------------
+#   [2002] T1 - Top tier cards
+#------------------------------------
+
+Show # $Div->T1 %TB-Divination-T1
+	Class "Divination"
+	BaseType "Abandoned Wealth" "Beauty Through Death" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Mawr Blaidd" "Pride Before the Fall" "The Celestial Stone" "The Doctor" "The Dragon's Heart" "The Fiend" "The Immortal" "The Iron Bard" "The King's Heart" "The Mayor" "The Queen" "The Samurai's Eye" "The Spark and the Flame" "The Undaunted" "The Wolf" "The Wolven King's Bite" "The Master" "The Nurse" "The Sacrifice"
+	SetFontSize 45
+	SetTextColor 0 0 255 255             # TEXTCOLOR:	 Divi T1
+	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Divi T1
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T0 Drop
+	MinimapIcon 0 Red Star
+
+#------------------------------------
+#   [2003] T2 - Great cards
+#------------------------------------
+
+Show # $Div->T2 %TB-Divination-T2
+	Class "Divination"
+	BaseType "Boon of the First Ones" "Chaotic Disposition" "Last Hope" "Perfection" "The Artist" "The Cartographer" "The Celestial Justicar" "The Enlightened" "The Hoarder" "The Hunger" "The Last One Standing" "The Offering" "The Professor" "The Saint's Treasure" "The Sephirot" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Wind" "The World Eater" "Wealth and Power" "The Life Thief"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 200 200 0 255         # BORDERCOLOR:	 Aspect: 83plus
+	SetBackgroundColor 100 250 250 245   # BACKGROUND:	 Divi T2
+	PlayAlertSound 1 300                 # DROPSOUND:	 T1 Dropsound
+	MinimapIcon 0 Red Triangle
+
+#------------------------------------
+#   [2004] T3 - Decent cards
+#------------------------------------
+
+Show # $Div->T3 %TB-Divination-T3
+	Class "Divination"
+	BaseType "Atziri's Arsenal" "Blessing of God" "Bowyer's Dream" "Emperor of Purity" "Gemcutter's Promise" "Glimmer of Hope" "Harmony of Souls" "Hope" "Hubris" "Humility" "Jack in the Box" "Left to Fate" "Lingering Remnants" "Lucky Connections" "Lucky Deck" "No Traces" "Rebirth" "Scholar of the Seas" "The Admirer" "The Aesthete" "The Beast" "The Body" "The Breach" "The Brittle Emperor" "The Cacophony" "The Chains that Bind" "The Cursed King" "The Dapper Prodigy" "The Dark Mage" "The Darkest Dream" "The Dreamer" "The Dreamland" "The Encroaching Darkness" "The Endless Darkness" "The Ethereal" "The Fletcher" "The Formless Sea" "The Gladiator" "The Hale Heart" "The Innocent" "The Inventor" "The Jester" "The Jeweller's Boon" "The Lion" "The Obscured" "The Penitent" "The Polymath" "The Porcupine" "The Price of Protection" "The Risk" "The Soul" "The Standoff" "The Surveyor" "The Sword King's Salute" "The Thaumaturgist" "The Throne" "The Trial" "The Twilight Moon" "The Valley of Steel Boxes" "The Warlord" "The Wilted Rose" "The Wretched" "Time-Lost Relic" "A Dab of Ink"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Divi T1
+	SetBackgroundColor 50 220 240 235    # BACKGROUND:	 Divi T3
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+	MinimapIcon 2 Yellow Triangle
+
+#------------------------------------
+#   [2005] Special - Special Currency Cards
+#------------------------------------
+
+Show # $Div->T4Currency %HS5 %TB-Divination-T4Currency
+	Class "Divination"
+	BaseType "Coveted Possession" "Emperor's Luck" "Loyalty" "The Catalyst" "The Gemcutter" "The Survivalist" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Vinia's Token"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 100 150 255         # BORDERCOLOR:	 Divi T4
+	SetBackgroundColor 145 215 230 225   # BACKGROUND:	 Divi T4
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+	MinimapIcon 2 White Triangle
+
+Show # $Div->T5Currency %H4 %TB-Divination-T5Currency
+	Class "Divination"
+	BaseType "Rain of Chaos" "The Puzzle" "The Scholar"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Neutral T1.5
+	SetBackgroundColor 175 215 230 180   # BACKGROUND:	 Divi T5
+
+#------------------------------------
+#   [2006] T5 - Format trash tier cards... before
+#------------------------------------
+
+Hide # $Div->T5 %H3 %TB-Divination-T5
+	Class "Divination"
+	BaseType "A Mother's Parting Gift" "Anarchy's Price" "Audacity" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Destined to Crumble" "Doedre's Madness" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain Tempter" "Struck by Lightning" "The Army of Blood" "The Betrayal" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power"
+	SetFontSize 36
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Neutral T1.5
+	SetBackgroundColor 175 215 230 180   # BACKGROUND:	 Divi T5
+
+#------------------------------------
+#   [2007] T4 - ...showing the remaining cards
+#------------------------------------
+
+Show # $Div->T4 %HS4
+	Class "Divination"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 100 150 255         # BORDERCOLOR:	 Divi T4
+	SetBackgroundColor 145 215 230 225   # BACKGROUND:	 Divi T4
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+	MinimapIcon 2 White Triangle
+####################################################################################
+
+# Essence
+Show
+    Class "Currency"
+    BaseType "Essence" "Remnant of Corruption"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 192 203
+    SetBorderColor 0 0 0
+    SetFontSize 40
+
+# Silver Coins
+Show
+    BaseType "Silver Coin"
+    SetTextColor 222 222 222
+    SetBackgroundColor 92 92 92
+    SetBorderColor 219 219 219
+    SetFontSize 45
+
+# Labyrinth Keys
+Show
+    BaseType "Silver Key" "Treasure Key" "Golden Key"
+    SetTextColor 74 230 58
+    SetBorderColor 74 230 58
+    SetFontSize 42
+
+# Talisman    
+Show
+    BaseType "Talisman"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58
+    SetBorderColor 0 128 0
+    SetFontSize 38
+####################################################################################
+# Field 1, GG
+####################################################################################
+Show
+    Class "Fishing Rod"
+    SetTextColor 255 0 204
+	PlayAlertSound 6 300
+	MinimapIcon 0 Red Star
+
+Show
+    LinkedSockets = 6
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 44
+    PlayAlertSound 6 300
+	MinimapIcon 0 Red Star
+
+Show
+    BaseType "Mirror of Kalandra" "Rhoa Feather" "Divine Orb" "Exalted Orb"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 44
+    PlayAlertSound 6 300
+	MinimapIcon 0 Red Star
+####################################################################################
+# Field 2, Currency/Recipe
+####################################################################################
+
+Show # $Currency->High-T1 %TB-Currency-T1.5
+	Class "Delve Socketable Currency"
+	BaseType "Prime"
+	SetFontSize 45
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Cosmetic White
+	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 T1 highlight
+	SetBackgroundColor 240 90 35 255     # BACKGROUND:	 Currency T2
+	PlayAlertSound 1 300                 # DROPSOUND:	 T1 Dropsound
+	DisableDropSound True
+	MinimapIcon 0 Red Circle
+	PlayEffect Red
+
+Show # $Currency->High-T1 %TB-Currency-T1.5
+	Class "Delve Socketable Currency"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Neutral T1.5
+	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 Currency T4
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+	DisableDropSound True
+	MinimapIcon 2 White Circle
+	PlayEffect White
+
+Show # $Currency->High-T2 %TB-Currency-T2
+	Class Currency
+	BaseType "Fossil"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 High Special Base
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Neutral T1
+	SetBackgroundColor 249 150 25 255    # BACKGROUND:	 Currency T3
+	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
+	DisableDropSound True
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Yellow
+	
+Hide
+    BaseType "Portal Scroll"
+	SetFontSize 28
+	
+Hide
+    BaseType "Scroll of Wisdom"
+	SetFontSize 28
+
+Show
+    BaseType "Regal Orb" "Orb of Regret" "Chaos Orb" "Blessed Orb" "Gemcutter's Prism" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Glassblower's Bauble" "Vaal Orb" "Cartographer's Chisel" "Orb of Annulment" "Bestiary Orb"
+    SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255             
+	SetBackgroundColor 249 150 25 255    
+    SetFontSize 38
+    PlayAlertSound 1 300
+	MinimapIcon 2 Green Circle
+	
+Show
+	BaseType "Master Cartographer's Sextant" "Journeyman Cartographer's Sextant" "Apprentice Cartographer's Sextant"
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 21 200 21 255
+	SetFontSize 38
+	PlayAlertSound 10 300
+
+Hide
+    Class "Currency"
+    SetTextColor 255 204 0
+
+Hide
+    LinkedSockets = 5
+    SetTextColor 255 255 255
+    SetBackgroundColor 100 100 255
+    SetFontSize 36
+    PlayAlertSound 2 300
+
+Show
+    Sockets = 6
+    SetTextColor 255 255 255
+    SetBackgroundColor 255 50 50
+    SetBorderColor 255 0 0
+    SetFontSize 36
+    PlayAlertSound 15 300
+	MinimapIcon 2 Blue Diamond
+
+Hide
+    SocketGroup "RGB"
+    SetBorderColor 0 204 255
+	SetFontSize 30
+	
+####################################################################################
+#Maps	
+Show
+    Class "Labyrinth Map Item"
+    SetTextColor 0 0 102
+    SetBackgroundColor 255 255 100
+    SetFontSize 36
+    PlayAlertSound 4 300
+####################################################################################
+# Maps
+####################################################################################
+### SPECIAL AND SHAPED
+Show # Maps:Unique
+	Class Maps
+	Rarity Unique
+	SetTextColor 153 101 21
+    SetBackgroundColor 238 232 170
+    SetBorderColor 153 101 21
+    SetFontSize 40
+	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+	MinimapIcon 2 Brown Square
+	
+Show
+	Class Maps
+	ElderMap True
+	SetFontSize 45
+	SetTextColor 100 0 122 255           # TEXTCOLOR:	 Cosmetic: T16 guardian maps
+	SetBorderColor 100 0 255 255         # BORDERCOLOR:	 Cosmetic: T16 guardian maps
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 5 300                 # DROPSOUND:	 T1 Maps
+	MinimapIcon 2 Blue Square
+	
+Show # Maps:T16
+	Class Maps
+	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
+	SetFontSize 45
+	SetTextColor 100 0 122 255           # TEXTCOLOR:	 Cosmetic: T16 guardian maps
+	SetBorderColor 100 0 255 255         # BORDERCOLOR:	 Cosmetic: T16 guardian maps
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 5 300                 # DROPSOUND:	 T1 Maps
+	MinimapIcon 2 Blue Square
+	
+Show # Maps:SHAPED T11-15
+	MapTier >= 11
+	Class Maps
+	ShapedMap True
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 255 255 255           # BORDERCOLOR:	 black
+    SetBackgroundColor 124 9 9           # BACKGROUND:	 Dark red
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	MinimapIcon 2 Red Square
+	
+Show # Maps: SHAPED T6-T10
+	Class Maps
+	ShapedMap True
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 255 255 255           # BORDERCOLOR:	 yellow
+    SetBackgroundColor 175 75 3          # BACKGROUND:	 orange
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	MinimapIcon 2 Yellow Square
+
+### REGULAR MAPS
+Show # Maps:T11-15
+	MapTier >= 11
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 white
+    SetBackgroundColor 124 9 9           # BACKGROUND:	 Dark red
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	MinimapIcon 2 Red Square
+		
+Show # Maps:T6-T10
+	MapTier >= 6
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 0 0 0           		 # BORDERCOLOR:	 white
+    SetBackgroundColor 175 75 3          # BACKGROUND:	 orange
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	MinimapIcon 2 Yellow Square
+	
+Show # Maps T1-T5
+	Class Maps
+	SetFontSize 42
+	SetTextColor 255 255 255             # TEXTCOLOR:	 white
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 white
+    SetBackgroundColor 93 8 178          # BACKGROUND:	 dark purple
+	PlayAlertSound 4 300                 # DROPSOUND:    maps
+	MinimapIcon 2 White Square
+
+####################################################################################
+# Field 3, Gems
+####################################################################################
+Show
+    Quality > 15
+    Class "Gem"
+    SetTextColor 0 204 255
+    SetBorderColor 0 204 255
+
+Hide
+    Class "Gems"
+    SetTextColor 0 204 255
+####################################################################################
+# Field 4, Uniques, Jewels and Rares
+####################################################################################
+Show
+    Rarity = Unique
+    SetTextColor 143 93 9
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 40
+    PlayAlertSound 7 300
+	
+Show
+    Class "Abyss Jewel"
+	Rarity = Rare
+    SetBackgroundColor 249 245 154 220
+    SetTextColor 1 1 1
+    SetBorderColor 210 0 220
+    SetFontSize 38
+	
+Show
+    Class "Abyss Jewel"
+	Rarity = Magic
+    SetBackgroundColor 135 135 254 220
+    SetTextColor 1 1 1
+    SetBorderColor 210 0 220
+    SetFontSize 38
+
+Show
+    Class "Jewel"
+	Rarity = Rare
+    BaseType "Cobalt Jewel"
+    SetBackgroundColor 29 43 75
+
+Show
+    Class "Jewel"
+	Rarity = Rare
+    BaseType "Crimson Jewel"
+    SetBackgroundColor 75 29 35
+
+Show
+    Class "Jewel"
+	Rarity = Rare
+    BaseType "Viridian Jewel"
+    SetBackgroundColor 35 75 29
+####################################################################################	
+#EXPLICIT MOD FILTERING
+####################################################################################
+#------------------------------------
+#   [0501] Betrayal Specific Filtering
+#------------------------------------
+
+Show # Veiled Mod
+	Identified True
+	HasExplicitMod "Veil"
+	SetFontSize 45
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+
+Show # Safety Entry - just to test if there's unided veiled items
+	HasExplicitMod "Veil"
+	SetFontSize 45
+	SetBorderColor 255 0 255 240
+
+#------------------------------------
+#   [0502] League-Specific Magic Items
+#------------------------------------
+
+Show # Delve Mod Items - Poor %D3
+	Identified True
+	HasExplicitMod "of Crafting" "of Spellcraft" "of Weaponcraft"
+	SetFontSize 40
+	SetTextColor 255 190 0               # TEXTCOLOR:	 Rare 75+
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+
+Show # Delve Mod Items - Expensive
+	Identified True
+	HasExplicitMod "of the Underground" "Subterranean"
+	SetFontSize 45
+	SetTextColor 255 190 0               # TEXTCOLOR:	 Rare 75+
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+	SetBackgroundColor 0 75 30 255       # BACKGROUND:	 Rare T1
+
+Show # Stupid Beast Mod Items
+	Identified True
+	HasExplicitMod "of Farrul" "of Craiceann" "of Fenumus" "of Saqawal"
+	SetFontSize 45
+	SetTextColor 255 190 0               # TEXTCOLOR:	 Rare 75+
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+	SetBackgroundColor 0 75 30 255       # BACKGROUND:	 Rare T1
+
+Show # Incursion Mod Items
+	Identified True
+	Rarity Rare
+	HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte"
+	SetFontSize 45
+	SetTextColor 255 190 0               # TEXTCOLOR:	 Rare 75+
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+	SetBackgroundColor 0 75 30 255       # BACKGROUND:	 Rare T1
+
+Show # Incursion Mod Items
+	Identified True
+	Rarity Magic
+	HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte"
+	SetFontSize 45
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+
+Show # Warband Mod Items
+	Identified True
+	HasExplicitMod "Brinerot" "Mutewind" "Redblade" "Betrayer's" "Deceiver's" "Turncoat's"
+	SetFontSize 45
+	SetTextColor 0 240 190 240           # TEXTCOLOR:	 Special
+	SetBorderColor 0 240 190 240         # BORDERCOLOR:	 Special Base
+
+####################################################################################
+#RARE Items
+####################################################################################	
+#Fractured
+Show
+	FracturedItem True
+	SetFontSize 40 
+	SetBorderColor 38 0 86 
+	SetTextColor 38 0 86
+	SetBackgroundColor 210 0 220
+	MinimapIcon 0 White Circle
+	PlayAlertSound 6 300
+
+#Synthesized
+Show
+	SynthesisedItem True
+	SetFontSize 40
+	SetTextColor 210 0 220
+	SetBorderColor 210 0 220
+	SetBackgroundColor 38 0 86
+	PlayAlertSound 6 300
+	
+#Shaper or Elder
+Show
+	ShaperItem True
+	SetBorderColor 0 0 255
+	SetFontSize 40
+	
+Show
+	ElderItem True
+	SetBorderColor 0 255 0
+	SetFontSize 40
+
+# 75+ Regal
+#T1 Armor/Weapon Bases
+Hide
+	BaseType "Gemini Claw" "Imperial Claw" "Terror Claw" "Imperial Skean" "Imbued Wand" "Jewelled Foil" "Vaal Rapier" "Harbinger Bow" "Vaal Axe" "Opal Sceptre" "Astral Plate" "Titan Gauntlets" "Slink Boots" "Slink Gloves" "Titan Greaves" "Dragonscale Boots" "Dragonscale Gauntlets" "Royal Burgonet" "Lion Pelt" "Nightmare Bascinet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet" "Titanium Spirit Shield" "Crusader Gloves" "Murder Mitts" "Crusader Boots" "Profane Wand" "Platinum Kris" "Sambar Sceptre" "Ambusher" "Spiraled Foil"
+    Rarity = Rare
+    ItemLevel >= 75
+    SetBorderColor 255 0 0
+	SetFontSize 40
+	
+#All accessories
+Show
+	Class "Amulets" "Rings" "Belts"
+	Rarity = Rare
+	ItemLevel >= 75
+	SetBorderColor 255 0 0
+	SetFontSize 40
+	
+#Rest
+Hide
+    Rarity = Rare
+    ItemLevel >= 75
+    SetBorderColor 255 0 0
+	SetFontSize 30
+
+# 60+ Chaos
+
+#T1 Armor/Weapon Bases
+Hide
+	BaseType "Gemini Claw" "Imperial Claw" "Terror Claw" "Imperial Skean" "Imbued Wand" "Jewelled Foil" "Vaal Rapier" "Harbinger Bow" "Vaal Axe" "Opal Sceptre" "Astral Plate" "Titan Gauntlets" "Slink Boots" "Slink Gloves" "Titan Greaves" "Dragonscale Boots" "Dragonscale Gauntlets" "Royal Burgonet" "Lion Pelt" "Nightmare Bascinet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet" "Titanium Spirit Shield" "Crusader Gloves" "Murder Mitts" "Crusader Boots" "Profane Wand" "Platinum Kris" "Sambar Sceptre" "Ambusher" "Spiraled Foil"
+    Rarity = Rare
+    ItemLevel >= 60
+    SetBorderColor 255 204 0
+	SetFontSize 40
+	
+#All accessories
+Show
+	Class "Amulets" "Rings" "Belts"
+	Rarity = Rare
+	ItemLevel >= 60
+	SetBorderColor 255 204 0
+	SetFontSize 40
+	
+#Rest
+Hide
+	Rarity = Rare
+	ItemLevel >= 60
+	SetBorderColor 255 204 0 
+	SetFontSize 30
+
+Hide
+    Rarity = Rare
+
+####################################################################################
+# Field 5, Flasks
+####################################################################################
+Hide
+    BaseType "Flask"
+    BaseType "Amethyst" "Diamond" "Granite" "Jade" "Quartz" "Quicksilver" "Ruby" "Sapphire" "Topaz"
+    SetBackgroundColor 40 40 40
+
+Hide
+    BaseType "Flask"
+    BaseType "Divine Life" "Eternal Life"
+    SetTextColor 255 128 128
+    SetBackgroundColor 0 0 0 180
+
+Hide
+    BaseType "Flask"
+    BaseType "Divine" "Eternal"
+	Quality >= 10
+    ItemLevel >= 68
+    SetTextColor 200 200 200 180
+    SetBackgroundColor 0 0 0 180
+    SetFontSize 28
+
+#------------------------------------
+#   [2001] Hide outdated flasks
+#------------------------------------
+
+Hide #$flask, lvl
+	ItemLevel >= 35
+	Class "Life Flask" "Mana Flask"
+	BaseType Small Medium Large Greater Grand
+	SetFontSize 20
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+
+Hide #$flask, lvl
+	ItemLevel >= 53
+	Class "Life Flask" "Mana Flask"
+	BaseType Giant Colossal Sacred
+	SetFontSize 20
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+
+Hide #$flask, lvl
+	Quality <= 20
+	ItemLevel >= 67
+	Class "Life Flask" "Mana Flask"
+	BaseType Hallowed Sanctified Divine Eternal
+	SetFontSize 20
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+####################################################################################
+# Field 7, ETC
+####################################################################################
+#T1 Bases
+Show
+	BaseType "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Steel Ring" "Opal Ring" "Crystal Belt"
+	SetFontSize 32
+	SetBorderColor 191 0 255
+	
+#Chancing Items
+Hide
+	BaseType "Sorcerer Boots"
+	Rarity Normal
+	SetFontSize 38
+	SetTextColor 255 255 255 255         
+	SetBorderColor 0 150 0 150         
+
+Hide
+	BaseType "Gold Amulet"
+	Rarity Normal
+	SetTextColor 255 255 255 255   
+	SetBorderColor 0 150 0 150    
+
+Hide 
+	BaseType "Leather Belt"
+	Rarity Normal
+	SetTextColor 255 255 255 255   
+	SetBorderColor 0 150 0 150  
+	
+#Incursion mod items
+Show
+	Identified True
+	HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte"
+	SetFontSize 45
+	SetTextColor 220 0 0 240             # TEXTCOLOR:	 Incursion Mod
+	SetBorderColor 220 0 0 240           # BORDERCOLOR:	 Aspect High Potential
+	PlayAlertSound 3 300                 # DROPSOUND:	 Unique	
+
+# Chisel Recipe
+Hide
+	Quality >= 15
+    BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+
+# Shows 4 Linked Sockets Armor for Level, Stops Showing At Map Level (Endgame)
+Hide
+    LinkedSockets >= 4
+    Class "Body Armours" "Boots" "Gloves" "Helmets"
+    ItemLevel <= 68
+	
+#Shows any item with a lab enchant
+Show	
+	AnyEnchantment True
+	
+#Hides everything else
+Hide
+    Rarity = Normal
+
+Hide
+    Rarity = Magic
+
